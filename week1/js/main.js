@@ -16,7 +16,10 @@ function displayStory() {
   document.getElementById('story_display').innerHTML = storyHTML;
 }
 
-/* localStorage.clear(); I can use this code to clear or erase all the localStorage
+console.log(localStorage);
+/* 
+
+localStorage.clear(); I can use this code to clear or erase all the localStorage
    localStorage.removeItem('myCat'); or use this code to remmove one Item that was Storage
 
    There is this other way to store things:
