@@ -1,0 +1,12 @@
+body {
+  max-width: 70%;
+  margin: auto;
+}
+
+header {
+  background-color: aliceblue;
+}
+
+main {
+  background-color: antiquewhite;
+}
