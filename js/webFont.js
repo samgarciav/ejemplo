@@ -1,5 +1,5 @@
 WebFont.load(
   {
-    google: {families: ['Droid Sans', 'Droid Serif']}
+    google: {families: ['Nanum Gothic', 'Zilla Slab']}
   }
 );
