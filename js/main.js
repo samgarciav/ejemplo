@@ -1,11 +1,11 @@
 const links = [
   {
-    label: "Week1 learning, practice, and notes",
+    label: "Week1: Practicing localStorage",
     url: "week1/index.html"
   },
   {
     label: "Week 2",
-    url: "week2/index.html"
+    url: "#"
   }
 ];
 

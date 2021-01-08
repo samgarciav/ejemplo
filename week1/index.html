@@ -6,23 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story Editor</title>
   <meta name="description" content="Practicing the exercise of the reading">
-<link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/small.css">
 </head>
 
 <body>
   <h1>Story Editor</h1>
-  Story Name:<input id=name_input></input>
+  <label>Story Name:<input id=name_input></input></label>
+
   <section>
     <button onclick="loadStory()">Find and Edit It</button>
     <button onclick="saveStory()">Save It</button>
     <button onclick="displayStory()">Display It</button>
   </section>
-  <textarea id="story_editor" 
-  placeholder="Write a totally awesome story here." 
-  title="Try this to see how the HTML tags are allowed: <h1 color='red'>Testing</h1>"  ></textarea>
- 
- <section id="story_display"></section>
-<script src="js/main.js"></script>
+
+  <textarea id="story_editor" placeholder="Write a totally awesome story here."
+    title="Try this to see how the HTML tags are allowed: <h1 color='red'>Testing</h1>"></textarea>
+
+  <section id="story_display"></section>
+  
+  <footer>
+    <a href="../index.html">Go back to the Portfolio</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
