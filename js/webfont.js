@@ -1,5 +1,5 @@
   WebFont.load({
     google: {
-      families: ['Hanalei Fill', 'Nanum Gothic']
+      families: ['Dancing+Script:wght@700&display=swap', 'Raleway&display=swap']
     }
   });
