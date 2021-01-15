@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 Inputs and Calculator</title>
+  <meta name="description" content="Practicing reading inputs and creating a calculator">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+</head>
+
+<body>
+  <header>
+    <h1>Reading Inputs and Creating a Calculator</h1>
+  </header>
+
+  <main>
+    <fieldset>
+      <legend>Please write some string and then click:</legend>
+      <input id="text" type="text">
+      <input type="button" value="Click me" onclick="myFunction()">
+      <div id="message">Watch the magin here...</div>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Please write a number: </legend>
+      <input id="number" type="number">
+      <input type="button" value="Click me" onclick="sumAllUp()">
+      <div id="summed">Watch the magin here...</div>
+    </fieldset>
+
+    <label><label>
+        <fieldset>
+          <legend>Please provide two numbers: </legend>
+          <div class="calculator">
+            <input class="numbers" type="number">
+            <select name="operation" id="operation">
+              <option value="sum">+</option>
+              <option value="rest">-</option>
+              <option value="multiply">x</option>
+              <option value="divide">&#247;</option>
+            </select>
+        <input class="numbers" type="number">
+          </div>
+      <input type="button" value="Click me" onclick="numbersOperation()">
+    <div id="results">Watch the magin here...</div>
+    </fieldset>
+  </main>
+
+  <footer>
+    <p> &copy; <span id="getFullYear"></span> | Samuel García | México</p>
+    <p class="lastp">Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/lastModified.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="js/webfont.js"></script>
+
+
+</body>
+
+</html>

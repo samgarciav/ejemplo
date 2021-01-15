@@ -1,0 +1,63 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  background-color: antiquewhite;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Dancing Script', sans-serif;
+  margin: 0;
+  padding: 1em;
+}
+
+main {
+  padding: 1em;
+  background-color: aqua;
+}
+
+fieldset {
+  margin: 2em 0em;
+}
+
+fieldset div{
+  color: rgba(0, 0, 0, .5);
+}
+
+legend:nth-child(-n+2)+input {
+  box-sizing: border-box;
+  margin: .5em 0em;
+  padding: .5em;
+  width: 100%;
+  text-align: center;
+}
+
+input[type=button]{
+  display: block;
+  margin: .5em auto;
+}
+
+fieldset div {
+  text-align: center;
+  margin: 1em;
+  border: 1px solid red;
+  padding: 1em;
+}
+
+.calculator input{
+width: 5em;
+padding: .1em;
+text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: aquamarine;
+  margin: 0;
+  padding: 1em;
+  font-weight: 700;
+  font-size: .7em;
+}
