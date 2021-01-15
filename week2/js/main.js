@@ -22,17 +22,17 @@ function numbersOperation() {
   let operation = document.getElementById("operation");
   let result;
   switch (operation.value) {
-    case "multiply":
-      result = multiply(num1, num2);
-      break
     case "sum":
-      result = sum(num1,num2);
+      result = sum(num1, num2);
       break
     case "rest":
       result = rest(num1, num2);
       break
+    case "multiply":
+      result = multiply(num1, num2);
+      break
     case "divide":
-      result = divide(num1,num2);
+      result = divide(num1, num2);
       break
   }
   document.getElementById('results').innerHTML = result;
@@ -45,8 +45,8 @@ function sum(num1, num2) {
 }
 
 //function expression
-const rest = function(num1, num2){
-  return num1-num2
+const rest = function (num1, num2) {
+  return num1 - num2
 }
 
 // Arrow function
