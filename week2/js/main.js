@@ -1,15 +1,19 @@
-function myFunction() {
+function returnText() {
   let input = document.getElementById("text").value;
   document.getElementById('message').innerHTML = `Your wrote "${input}"`;
 }
 
 function sumAllUp() {
   let number = parseFloat(document.getElementById("number").value);
+  document.getElementById('summed').innerHTML = sumAll(number);
+}
+
+const sumAll = number => {
   let sum = 0;
   for (let i = 1; i <= number; i++) {
     sum += i;
   }
-  document.getElementById('summed').innerHTML = sum;
+  return sum
 }
 
 function numbersOperation() {
@@ -19,21 +23,35 @@ function numbersOperation() {
   let result;
   switch (operation.value) {
     case "multiply":
-      result = num1 * num2;
+      result = multiply(num1, num2);
       break
     case "sum":
-      result = num1 + num2;
+      result = sum(num1,num2);
       break
     case "rest":
-      result = num1 - num2;
+      result = rest(num1, num2);
       break
     case "divide":
-      result = num1 / num2;
+      result = divide(num1,num2);
       break
   }
   document.getElementById('results').innerHTML = result;
 }
 
+
+// function declaration
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+//function expression
+const rest = function(num1, num2){
+  return num1-num2
+}
+
+// Arrow function
+const multiply = (num1, num2) => num1 * num2;
+const divide = (num1, num2) => num1 / num2;
 
 
 
