@@ -23,7 +23,7 @@ fieldset {
   margin: 2em 0em;
 }
 
-fieldset div{
+fieldset div {
   color: rgba(0, 0, 0, .5);
 }
 
@@ -35,9 +35,11 @@ legend:nth-child(-n+2)+input {
   text-align: center;
 }
 
-input[type=button]{
+input[type=button] {
   display: block;
   margin: .5em auto;
+  border-radius: 2px;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .5);
 }
 
 fieldset div {
@@ -47,17 +49,17 @@ fieldset div {
   padding: 1em;
 }
 
-.calculator input{
-width: 5em;
-padding: .1em;
-text-align: center;
+.calculator input {
+  width: 5em;
+  padding: .1em;
+  text-align: center;
 }
 
 footer {
   text-align: center;
   background-color: aquamarine;
-  margin: 0;
   padding: 1em;
   font-weight: 700;
   font-size: .7em;
+  margin: 0;
 }
