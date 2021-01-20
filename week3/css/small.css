@@ -1,0 +1,42 @@
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5em;
+  max-width: 95%;
+  margin: auto;
+}
+
+header {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 1em;
+
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Dancing Script', sans-serif;
+  margin: 0;
+  padding: 1em;
+}
+
+main {
+  padding: 1em;
+  background-color: aqua;
+  margin: 0;
+}
+
+section{
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+footer {
+  text-align: center;
+  background-color: aquamarine;
+  padding: 1em;
+  font-weight: 700;
+  font-size: .7em;
+  margin: 0;
+}
