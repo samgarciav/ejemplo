@@ -230,7 +230,7 @@ console.log(countingways);
 } */
 
 
-const people2= [
+const people2 = [
   { name: 'Wes', year: 1988 },
   { name: 'Kait', year: 1986 },
   { name: 'Irv', year: 1970 },
@@ -247,19 +247,36 @@ const comments = [
 
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
-const check19 = people2.some(person=>new Date().getFullYear()-person.year>=19);
-console.log(check19);
-
-console.log(new Date().getFullYear());
-
+const checkSome = people2.some(person => new Date().getFullYear() - person.year >= 19);
+console.log({ checkSome });
 
 // Array.prototype.every() // is everyone 19 or older?
+const checkEvery = people2.every(person => new Date().getFullYear() - person.year >= 19);
+console.log({ checkEvery });
 
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
 // find the comment with the ID of 823423
+const findFirst = comments.find(comment => comment.id == 823423);
+console.log(findFirst);
 
 // Array.prototype.findIndex()
 // Find the comment with this ID
-// delete the comment with the ID of 823423
+const findIndex = comments.findIndex(comment => comment.id == 542328);
+console.log(findIndex);
 
+// delete the comment with the ID of 823423
+const newComments = comments.filter(comment => comment.id != 823423);     // "Deleating" with the filter
+console.log(newComments);
+
+const newCommentsUsingForEach=[];
+comments.forEach((comment) => {                        // Deleating with a forEach. In reality I am pushing values into a new array except the one I want to delete
+  if (comment.id !== 823423) {
+    newCommentsUsingForEach.push(comment);
+  }
+});
+console.log(newCommentsUsingForEach);
+
+const index= comments.findIndex(comment=>comment.id==823423);   //The way he did it in the video
+comments.slice(index,1);
+console.log(comments);
