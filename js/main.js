@@ -10,10 +10,18 @@ const links = [
   {
     label: "Week 3: Notes an team activity",
     url: "week3/week3.html"
-  },  
+  },
   {
     label: "Week 4: Notes from the readings and Tic Tac Toe",
     url: "week4/week4a.html"
+  },
+  {
+    label: "Week 4: Event Listener Practice",
+    url: "week4/eventListeners.html"
+  },
+  {
+    label: "Week 5: Hikes",
+    url: "week5/hikes.html"
   }
 ];
 

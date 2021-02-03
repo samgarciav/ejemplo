@@ -1,0 +1,64 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  margin: auto;
+  max-width: 95%;
+}
+
+header {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 1em;
+}
+
+h1 {
+  font-family: 'Dancing Script', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+h2{
+  background-color: aquamarine;
+  text-align: center;
+  padding: .5em;
+  margin-top: 2em;
+  clear: both;
+}
+
+li:first-child h2{
+  margin-top: 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  overflow: auto;
+}
+
+main {
+  background-color: aqua;
+  margin: 0;
+  padding: 1em;
+}
+
+li div {
+  text-align: center;
+}
+
+img {
+  max-width: 50%;
+  float: left;
+}
+
+footer {
+  text-align: center;
+  background-color: aquamarine;
+  padding: 1em;
+  font-weight: 700;
+  font-size: .5em;
+  margin: 0;
+}
