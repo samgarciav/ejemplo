@@ -135,7 +135,11 @@ export default class Hikes {
   }
 
   // show one hike with full details in the parentElement
-  showOneHike(hikeName) { }
+  showOneHike(hikeName) {
+    const oneHike = this.getHikeByName(hikeName);
+    this.parentElement.innerHTML="";
+    this.parentElement.appendChild(renderOneHikeFull(oneHike))
+   }
 
   // in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
   addHikeListener() {
@@ -174,5 +178,17 @@ function renderOneHikeLight(hike) {
 
 function renderOneHikeFull(hike) {
   const item = document.createElement("li");
+  item.innerHTML = ` <hr><p>One Hike:</p><h2>${hike.name}</h2>
+  <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+  <div>
+          <div>
+              <h3>Distance</h3>
+              <p>${hike.distance}</p>
+          </div>
+          <div>
+              <h3>Difficulty</h3>
+              <p>${hike.difficulty}</p>
+          </div>
+  </div>`;
   return item;
 }
