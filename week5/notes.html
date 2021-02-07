@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Cardio 💪</title>
+    <meta
+      name="description"
+      content="Practicing with the excercises provided in the team activity"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/small2.css" />
+    <link rel="stylesheet" href="css/large.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Notes for week 5</h1>
+    </header>
+    <main>
+      <h2>Factory functions</h2>
+      <p>This week I read again and practice with the Factory Functions, the Objects, and the Classes. I had to review to solidify the concepts in my mind. I guess these concepts go hand in hand, and somehow I can not understand them separately.</p>
+      <p>
+        const turtleFactory = (name, power, action) => {<br>
+        return {<br>
+           _name: name,<br>
+           _power: power,<br>
+           action: function () {console.log('Lets attack'); },<br>
+           get name() { return this._name },<br>
+           set setName(nameEqualled) { return this._name = nameEqualled }<br>
+           }<br>
+          }<br> 
+        const newTurtleByFactory = turtleFactory("Sam", "Learn");<br>
+        console.log(newTurtleByFactory);
+      </p>
+
+      <h2>Classes</h2>
+     <p>
+        class Turtle { constructor(name, color) { this._name = name; let _color =
+        color; this.setColor = color => { return _color = color; } this.getColor =
+        () => _color; } get name() { return this._name } } const raph = new
+        Turtle('Raphael', 'Red');
+     </>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="getFullYear"></span> | Samuel García | México</p>
+      <p class="lastp">Last Updated: <span id="lastModified"></span></p>
+      <a href="../index.html">Go back to the Portfolio</a>
+    </footer>
+
+    <script src="js/notes.js"></script>
+    <script src="js/lastModified.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/webfont.js"></script>
+  </body>
+</html>

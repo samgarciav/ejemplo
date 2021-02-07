@@ -69,7 +69,7 @@ class Hikes {
     // show the back button
     this.backButton.classList.remove('hidden');
   }
-  
+
   // in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
   addHikeListener() {
     // We need to loop through the children of our list and attach a listener to each, remember though that children is a nodeList...not an array. So in order to use something like a forEach we need to convert it to an array.
@@ -149,6 +149,6 @@ function renderOneHikeFull(hike) {
   return item;
 }
 
-window.addEventListener("load",()=>{
-  const myHikes=new Hikes('hikes').showOneHike();
+window.addEventListener("load", () => {
+  const myHikes = new Hikes('hikes')
 })

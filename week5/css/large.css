@@ -4,4 +4,8 @@
     max-width: 70%;
     margin: auto;
   }
+  img {
+    max-width: 50%;
+    float: left;
+  }
 }
