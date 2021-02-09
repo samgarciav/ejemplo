@@ -15,7 +15,7 @@ $title-font: 'Carter One';
 
 h1 {
   margin: 0;
-  padding: 5px;
+  padding: 5px 15px;
   background-color: $grey;
   border-radius: 10px;
   font-family: $title-font;
@@ -29,8 +29,14 @@ h1 {
 }
 
 li {
-  display: flex;
-
+  display: grid;
+  grid-template-columns: repeat(2, 80% 20%);
+  align-items: center;
+  padding: 10px;
+  border: 1px solid blue;
+  list-style: none;
+  border-radius: 10px;
+  margin-bottom: 1em;
 }
 
 input {
@@ -42,6 +48,15 @@ input {
 
 input[type=checkbox] {
   display: none;
+  align-items: center;
+}
+
+img {
+  justify-self: end;
+}
+
+label {
+  display: flex;
   align-items: center;
 }
 
@@ -78,8 +93,9 @@ ul {
   margin: 10px;
 }
 
-li {
-  padding: 10px;
-  border: 1px solid blue;
-  list-style: none;
+@media only screen and (min-width: 64rem) {
+  main {
+    margin: 10em auto;
+    max-width: 50%;
+  }
 }

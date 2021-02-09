@@ -27,7 +27,7 @@ class Turtle {
 const leo=new Turtle('Leo','hands');
 */
 
-/* FACTORY FUNCTIONS */
+/*--------------------------- FACTORY FUNCTIONS ---------------------------*/
 const turtleFactory = (_name, _power) => {
   return {
     _name,
@@ -44,7 +44,6 @@ const turtleFactory = (_name, _power) => {
 const newTurtleByFactory = turtleFactory("Sam", "Learn");
 console.log(newTurtleByFactory);
 
-
 /* ------------------ CLASESS -------------------------- */
 class Turtle {
   constructor(name, color) {
@@ -54,10 +53,24 @@ class Turtle {
     this.getColor = () => _color;
   }
 
-  get name() { return this._name }
+  get name() {
+    return this._name;
+  }
+
+  attack() { console.log(this.name, 'Attack!') }
+}
+const raph = new Turtle('Raphael', 'Red');
+console.log(raph);
+
+/*--------------------------- CONSTRUCTOR FUNCTIONS ---------------------------*/
+function TurtleConstructor(name, power) {
+  this.name = name;
+  this.power = power;
 }
 
-const raph = new Turtle('Raphael', 'Red');
+TurtleConstructor.prototype.attack = function () {
+  console.log(this.name, 'Attack');
+}
 
-
-
+const leo = new TurtleConstructor('Leo', "chacos");
+console.log(leo)
