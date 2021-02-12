@@ -13,7 +13,7 @@ export class Task {
     li.innerHTML = ` 
     <input type="checkbox" name="checkbox" id="${this.timeId}" ${this.ischeck}/>
     <label for="${this.timeId}">${this.description}</label>
-    <img src="./images/close.png" alt="close" class="hide"/>
+    <img src="./images/close.jpg" alt="close" class="hide"/>
     `
     list.appendChild(li);
 
