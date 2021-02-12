@@ -7,6 +7,38 @@
   padding: 10px;
 }
 
+.summary {
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+  font-size: 0.5em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 20% 1fr 1fr 1fr;
+}
+
+.summary p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.summary button {
+  padding: 5px;
+  height: 50%;
+  width: 100%;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #e7e7e7;
+  color: black;
+}
+.summary button:hover {
+  background-color: white;
+  border: 1px solid grey;
+}
+.summary button:active {
+  background-color: white;
+}
+
 h1 {
   margin: 0;
   padding: 5px 15px;

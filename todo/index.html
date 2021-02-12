@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <meta name="description" content="A site to track your to do list" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <main>
-      <div class="card">
-        <h1>To Do List</h1>
-        <div class="list">
-          <ul id="list">
-            <!-- <li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List</title>
+  <meta name="description" content="A site to track your to do list" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <h1>To Do List</h1>
+      <div class="list">
+        <ul id="list">
+          <!-- <li>
               <input type="checkbox" name="done" id="checkbox" />
               <label for="checkbox">Actividad</label>
               <img src="images/close.png" alt="close" />
             </li> -->
-          </ul>
-        </div>
-
-        <div class="insertingNewTask">
-          <input type="text" name="activitie" id="newActivitie" />
-          <button id="addNewActivitie">+</button>
-        </div>
+        </ul>
       </div>
-    </main>
-    <script src="js/main.js"></script>
-  </body>
+      <div class="summary">
+        <p style="display: none" class="summaryBtns" id="Pending"><span id="pending">X</span>tasks left</p>
+        <button style="display: none" class="summaryBtns" id="allBtn">All</button>
+        <button style="display: none" class="summaryBtns" id="toDoBtn">To Do</button>
+        <button style="display: none" class="summaryBtns" id="doneBtn">Done</button>
+      </div>
+
+      <div class="insertingNewTask">
+        <input type="text" name="activitie" id="newActivitie" placeholder="Add a new task" />
+        <button id="addNewActivitie">+</button>
+        
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js" type="module"></script>
+</body>
+
 </html>
