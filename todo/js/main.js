@@ -35,4 +35,3 @@ function creatTask() {
   task.save(task);
   document.getElementById("newActivitie").value = "";
 }
-
