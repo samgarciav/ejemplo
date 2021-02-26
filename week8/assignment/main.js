@@ -50,7 +50,7 @@ function creatBtnPrev(response) {
 }
 
 function previouspage() {
-  getPeople(this.previous).then(response => {
+  getPeople(this.previous.replace("http","https")).then(response => {
     const personsArray = response.results;
     const divPersonas = document.getElementById('personas');
     divPersonas.innerHTML = "";
