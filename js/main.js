@@ -34,8 +34,13 @@ const links = [
   {
     label: "Week 7: Comments",
     url: "week7/hikes.html"
+  },
+  {
+    label: "Week 8: FETCH",
+    url: "week8/assignment/index.html"
   }
 ];
+
 
 var ol = document.getElementsByTagName('ol')[0];
 
