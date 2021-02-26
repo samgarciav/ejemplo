@@ -31,7 +31,7 @@ function creatBtnNext(response) {
 }
 
 function nextpage() {
-  getPeople(this.next).then(response => {
+  getPeople(this.next.replace("http","https")).then(response => {
     const personsArray = response.results;
     const divPersonas = document.getElementById('personas');
     divPersonas.innerHTML = "";
