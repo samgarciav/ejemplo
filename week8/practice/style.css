@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Raleway&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: auto;
+  max-width: 95%;
+}
+
+header {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 1em;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+
+  text-align: center;
+}
+
+main {
+  background-color: aqua;
+  margin: 0;
+  padding: 1em;
+}
+
+footer {
+  text-align: center;
+  background-color: aquamarine;
+  padding: 1em;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media only screen and (min-width: 64rem) {
+body{
+  max-width: 70%;
+  margin: 200px auto;
+}
+}

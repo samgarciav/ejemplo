@@ -19,7 +19,7 @@ const page1 = () => {
 
 function creatBtnNext(response) {
   const btn = document.createElement("button");
-  btn.setAttribute("class", "btn");
+  btn.setAttribute("class", "btn-next");
   if (response.next != null) {
     btn.innerHTML = "Next page";
     btn.addEventListener("click", nextpage.bind(response));
@@ -43,9 +43,10 @@ function nextpage() {
 
 function creatBtnPrev(response) {
   const btn = document.createElement("button");
-  btn.setAttribute("class", "btn");
+  btn.setAttribute("class", "btn-prev");
   btn.innerHTML = "Previous page";
   btn.addEventListener("click", previouspage.bind(response));
+  response.previous ==null? btn.style.display = "none": btn.style.display = "block" ;
   return btn;
 }
 
