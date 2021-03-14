@@ -46,6 +46,10 @@ const links = [
   {
     label: "Week 9: Key Sound",
     url: "week9/index.html"
+  },
+  {
+    label: "Week 10: Quakes",
+    url: "week10/index.html"
   }
 ];
 

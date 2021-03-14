@@ -4,7 +4,7 @@ const request = new XMLHttpRequest();                            // here we are 
 request.addEventListener('readystatechange', () => {
   //console.log(request, request.readyState)                     //this console the request itself and it's readyState  
   if (request.readyState === 4 && request.status === 200) {      // all this code is to ckeck for an error and if there is not an error then parse and console the request
-    console.log("basic way",JSON.parse(request.responseText));
+    console.log("basic way", JSON.parse(request.responseText));
   } else if (request.readyState === 4) {
     console.log('could not fetch the data');
   }
@@ -58,10 +58,10 @@ getPeople('https://swapi.dev/api/people/', (err, data) => {        // it looks l
 /* --------------------------------------------------------------------------------------------------------------- */
 /************************************ Promises ************************************/
 const goGetData = () => {
-  return new Promise((resolve, reject) => {             // this new Promise uses a callback function to initialize
-    // fetch some data                                  // these resolve and reject are or will be functions that will be fired when the conditions are matched
-    resolve(/* data as an argument */);                 // if the condition match resolve() will be fired
-    reject(/* error as an argument */);                 // if the condition match reject() will be fired
+  return new Promise((resolve, reject) => {       // this new Promise uses a callback function to initialize ... this callback function has 2 parameters that are also functions
+    // fetch some data                            // these resolve and reject are or will be functions that will be fired when the conditions are matched
+    resolve(/* data as an argument */);           // if the condition match resolve() will be fired
+    reject(/* error as an argument */);           // if the condition match reject() will be fired
   });
 }
 
@@ -135,10 +135,10 @@ getPeopleChain('https://swapi.dev/api/people/')
 fetch('https://swapi.dev/api/people/')                       // this fetch returns a promise (a function that will be called depending on the result, resolve or reject)
   // the fetch will return as an argument's promise a response Object
   .then((response) => {                                     // the same principle applies, we can tackle a .then() for the promise resolve. 
-    console.log("response object", response);                   // this response Object has a method called json()    
+    console.log("response object", response);               // this response Object has a method called json()    
     return response.json()                                  // this method will return a PROMISE, it is not yet the actual data
-  }).then(data => console.log("fetching", data))              // same as befor, we tackle the .then() for the returned response.json() wich now it has the data                                      
-  .catch();                                                    // same for the .catch() BUT it works a little different. It will resolve either if the endpoint is wrong. It only throws an error on network error
+  }).then(data => console.log("fetching", data))            // same as befor, we tackle the .then() for the returned response.json() wich now it has the data                                      
+  .catch();                                                 // same for the .catch() BUT it works a little different. It will resolve either if the endpoint is wrong. It only throws an error on network error
 /* --------------------------------------------------------------------------------------------------------------- */
 
 
@@ -146,12 +146,12 @@ fetch('https://swapi.dev/api/people/')                       // this fetch retur
 /* --------------------------------------------------------------------------------------------------------------- */
 /************************************ FETCH CHAINING  ************************************/
 
-fetch('https://swapi.dev/api/people/')                       // this fetch returns a promise (a function that will be called depending on the result, resolve or reject)
+fetch('https://swapi.dev/api/people/')                            // this fetch returns a promise (a function that will be called depending on the result, resolve or reject)
   // the fetch will return as an argument's promise a response Object
-  .then((response) => {                                     // the same principle applies, we can tackle a .then() for the promise resolve. 
-    console.log("response object", response);                   // this response Object has a method called json()    
-    return response.json()                                  // this method will return a PROMISE, it is not yet the actual data
-  }).then(data => {
+  .then((response) => {                                           // We can tackle a .then(that will fire a function) for the promise resolve. 
+    console.log("response object", response);                     // this function will recive as a parameter an Object (response objejct) that has a .json() medoth
+    return response.json()                                        // response.json() returns a PROMISE, it is not yet the actual data
+  }).then(data => {                                               // again, the promise when resolved fires a callback function that passes as the argument the data
     console.log("fetching", data);
     return fetch(data.next).then(response => response.json());
   }).then(data2 => console.log("fetch 2nd page", data2))                                                       // same as befor, we tackle the .then() for the returned response.json() wich now it has the data                                      
@@ -164,9 +164,8 @@ fetch('https://swapi.dev/api/people/')                       // this fetch retur
 /************************************ async and await  ************************************/
 const getPeopleAA = async () => {
   const response = await fetch('https://swapi.dev/api/people/');
-  const people = response.json();
-  return people;
+  const data = await response.json()
+  console.log('async and await', data)
 }
 
-const people = getPeopleAA();
-console.log(people);
+getPeopleAA();
