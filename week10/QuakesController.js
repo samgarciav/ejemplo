@@ -52,10 +52,12 @@ export default class QuakesController {
     this.quakesView.renderQuakeList(quakeList, this.parentElement);
     // add a listener to the new list of quakes to allow drill down in to the details
     const quekesli = [...document.querySelectorAll('li')];
-    quekesli.forEach(li => li.addEventListener("click", (e) => {
-      const quake = this.quakes.getQuakeById(e.target.dataset.id);
-      this.quakesView.renderQuake(quake, this.parentElement);
-    }));
+    quekesli.forEach(li => {
+      li.addEventListener("click", (e) => {
+        const quake = this.quakes.getQuakeById(e.target.dataset.id);
+        this.quakesView.renderQuake(quake, this.parentElement);
+      })
+    });
 
   }
 

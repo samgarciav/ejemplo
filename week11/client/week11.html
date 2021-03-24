@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Jason Web Tokens</title>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Auth example app</h1>
+  </header>
+  <main>
+    <form action="" id="login">
+      <label>Username <input type="text" id="username"></label>
+      <label>Password <input type="password" id="password"></label>
+      <button type="button">Submit</button>
+    </form>
+
+    <div id="content" class="hidden">
+      <form name="postForm">
+        <div>
+          <label for="title">Title</label>
+          <input type="text" class="form-control" name="title" placeholder="title" required />
+        </div>
+        <div>
+          <label for="content">Content</label>
+          <input type="text" class="form-control" name="content" placeholder="content" required />
+        </div>
+        <div id="postError"></div>
+        <input type="submit" id="createSubmit" />
+      </form>
+
+      <ul id="list"></ul>
+    </div>
+
+
+
+  </main>
+
+
+  <script src="week11.js" type="module"></script>
+</body>
+
+</html>

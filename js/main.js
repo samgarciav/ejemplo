@@ -50,6 +50,10 @@ const links = [
   {
     label: "Week 10: Quakes",
     url: "week10/index.html"
+  },
+  {
+    label: "Week 11: Log in",
+    url: "week11/client/week11.html"
   }
 ];
 
