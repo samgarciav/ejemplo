@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: lato;
+  font-size: 10px;
+}
+
+.sr-only {
+  height: 0.1px;
+  width: 0.1px;
+  color: transparent;
+}
+
+header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #030331;
+  padding: 1em;
+  transition: all 0.01s 0.2s ease;
+}
+
+.logo {
+  display: block;
+  height: 4em;
+}
+.logo img {
+  max-height: 100%;
+}
+
+.cartimage {
+  height: 2.4em;
+}
+.cartimage img {
+  max-height: 100%;
+}
+
+.searchbar {
+  display: none;
+}
+
+.hamburgerBtn {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburgerBtn div {
+  width: 2em;
+  height: 1px;
+  background-color: white;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  transition: 0.35s ease-out;
+}
+.hamburgerBtn div:last-of-type {
+  margin-bottom: 0px;
+}
+.hamburgerBtn:hover div {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.open {
+  background-color: rgba(0, 0, 0, 0.93);
+}
+.open div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.open div:nth-child(2) {
+  transform: rotate(45deg);
+}
+.open div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+.open h1 {
+  color: white;
+}
+
+h1 {
+  flex-grow: 1;
+}
+
+.menu-list {
+  border: 1px solid;
+  padding: 2em;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.93);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-1100px);
+  animation: pos1 0.4s ease-in-out forwards;
+}
+
+.menu-list.open {
+  animation: pos 0.4s ease-in-out forwards;
+}
+
+@keyframes pos {
+  0% {
+    transform: translateY(-1100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes pos1 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-1100px);
+  }
+}
+.menu-list li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #424245;
+}
+
+li:hover,
+a:hover {
+  filter: brightness(200%);
+  color: white;
+}
+
+/* ------------------------ Sort and Filter Area ------------------------ */
+.sortFilterWrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  color: #3483fa;
+}
+
+.sortFilter {
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+.sortFilter:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+.sortFilter img {
+  height: 1em;
+  margin-right: 0.5em;
+}
+
+.cahngeView::before {
+  content: "";
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid #ddd;
+}
+
+/* ------------------------ Products Area ------------------------ */
+.productsGrid {
+  display: flex;
+  padding: 1em;
+  background-color: #f3f1f8;
+}
+.productsGrid img {
+  display: block;
+  max-width: 100%;
+}
+
+.prodcutsCol1 {
+  padding-right: 1em;
+}
+
+.singleProduct {
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+.productImg {
+  cursor: pointer;
+}
+
+.productInfo {
+  padding: 1em;
+}
+.productInfo .metal {
+  font-weight: 700;
+  padding-bottom: 0.5em;
+}
+.productInfo .description {
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-bottom: 0.5em;
+}
+.productInfo .description:hover {
+  cursor: pointer;
+}
+.productInfo .sku {
+  padding-bottom: 0.5em;
+  font-size: 0.9em;
+}
+.productInfo .promotion {
+  font-size: 1em;
+  color: red;
+}
+.productInfo .promotion .original-price {
+  text-decoration: line-through;
+}
+.productInfo .promotion .discount {
+  margin-left: 1em;
+}
+.productInfo .net-price {
+  padding-bottom: 0.2em;
+  font-size: 2em;
+}
+.productInfo .free-shipping {
+  font-size: 1em;
+  font-style: italic;
+}
+
+/* 
+.add-btn {
+  margin-bottom: 0.7em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  button {
+    width: 100%;
+    padding: 0.2em;
+  }
+}
+
+.add-btn button {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  border-radius: 0.3em;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+}
+.add-btn button:hover {
+  background-color: #4095c6;
+}
+ */
+
+/*# sourceMappingURL=style.css.map */
