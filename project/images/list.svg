@@ -1,7 +1,7 @@
 <svg viewBox="0 0 32 32"
   xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style>.cls-1{fill:none;stroke:#3483fa;stroke-linejoin:round;stroke-width:2px;}</style>
+    <style>.cls-1{fill:none;stroke:rgb(7  7 177);stroke-linejoin:round;stroke-width:2px;}</style>
   </defs>
   <g data-name="20-List" id="_20-List">
     <rect class="cls-1" height="6" width="6" x="1" y="1"/>
