@@ -27,7 +27,7 @@ header {
 
 .logo {
   display: block;
-  height: 4em;
+  height: 3em;
 }
 .logo img {
   max-height: 100%;
@@ -138,6 +138,7 @@ a:hover {
   height: 5em;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   color: #3483fa;
 }
 
@@ -150,7 +151,7 @@ a:hover {
   text-align: center;
 }
 .sortFilter:hover {
-  background-color: yellow;
+  background-color: rgba(0, 0, 0, 0.01);
   cursor: pointer;
 }
 .sortFilter img {
@@ -158,11 +159,10 @@ a:hover {
   margin-right: 0.5em;
 }
 
-.changeView::before {
-  content: "";
+.separators {
   width: 1px;
   height: 20px;
-  border-right: 1px solid #ddd;
+  background-color: #ddd;
 }
 
 /* ------------------------ Products Area ------------------------ */
