@@ -38,6 +38,7 @@ header {
 .logo {
   display: block;
   height: 3em;
+
   img {
     max-height: 100%;
   }
@@ -45,6 +46,7 @@ header {
 
 .cartimage {
   height: 2.4em;
+
   img {
     max-height: 100%;
   }
@@ -59,6 +61,7 @@ header {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+
   div {
     width: 2em;
     height: 1px;
@@ -66,10 +69,12 @@ header {
     border-radius: 25px;
     margin-bottom: 5px;
     transition: 0.35s ease-out;
+
     &:last-of-type {
       margin-bottom: 0px;
     }
   }
+
   &:hover div {
     transform: scale(1.1);
     z-index: 1;
@@ -80,9 +85,11 @@ header {
   div:nth-child(1) {
     transform: translateX(2px) translateX(-2px) translateY(6px) rotate(45deg);
   }
+
   div:nth-child(2) {
     transform: rotate(-45deg);
   }
+
   div:nth-child(3) {
     transform: translateX(2px) translateX(-2px) translateY(-6px) rotate(-45deg);
   }
@@ -100,8 +107,10 @@ header {
   overflow: hidden;
   // transform: translateY(-1100px);
   animation: pos1 0.1s linear forwards;
+
   li {
     list-style: none;
+
     a {
       display: block;
       text-decoration: none;
@@ -111,6 +120,7 @@ header {
       font-size: 1.3em;
       border-bottom: 1px solid #424245;
     }
+
     li:hover,
     a:hover {
       filter: brightness(200%);
@@ -118,6 +128,7 @@ header {
       border-bottom: 1px solid $icon-color;
     }
   }
+
   &.open {
     animation: pos 0.2s linear forwards;
   }
@@ -127,6 +138,7 @@ header {
   0% {
     top: 9%;
   }
+
   100% {
     top: 9%;
     height: 100%;
@@ -138,6 +150,7 @@ header {
     top: 9%;
     height: 100%;
   }
+
   100% {
     top: 9%;
     visibility: collapse;
@@ -162,15 +175,18 @@ header {
   justify-content: center;
   flex: 1;
   text-align: center;
+
   &:hover {
     background-color: rgba(141, 172, 56, 0.1);
     cursor: pointer;
   }
+
   img {
     height: 1em;
     margin-right: 0.5em;
   }
 }
+
 .separators {
   width: 1px;
   height: 20px;
@@ -188,40 +204,40 @@ header {
   font-size: 1.2em;
   background-color: rgba(255, 255, 255, 0.95);
   animation: pos1 0.1s linear forwards;
+
   li {
     list-style: none;
-    a {
-      display: block;
-      text-decoration: none;
-      color: black;
-      margin-bottom: 2em;
-      padding-bottom: 1em;
-      font-size: 1.3em;
-      border-bottom: 1px solid #424245;
-    }
-    li:hover,
-    a:hover {
-      filter: brightness(200%);
-      color: $icon-color;
-      border-bottom: 1px solid $icon-color;
-    }
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    font-size: 1.3em;
+    border-bottom: 1px solid #424245;
   }
+
+  li:hover {
+    filter: brightness(200%);
+    color: $icon-color;
+    border-bottom: 1px solid $icon-color;
+  }
+
   &.open {
     animation: pos 0.2s linear forwards;
   }
 }
-
 .backArrow {
   display: flex;
   align-items: center;
   font-size: 2em;
+
   img {
-    margin-right: .8em;
+    margin-right: 0.8em;
   }
 }
 
-.sortOptions{
- padding:2em 0 0 4em;
+.sortOptions {
+  padding: 2em 0 0 4em;
 }
 
 /* ------------------------ Products Area ------------------------ */
@@ -229,6 +245,7 @@ header {
   display: flex;
   padding: 1em;
   background-color: #f3f1f8;
+
   img {
     display: block;
     max-width: 100%;
@@ -237,9 +254,11 @@ header {
 
 .block {
   display: block;
+
   .prodcutsCol1 {
     padding-right: 0;
   }
+
   .singleProduct {
     display: flex;
     align-items: center;
@@ -264,38 +283,47 @@ header {
 
 .productInfo {
   padding: 1em;
+
   .metal {
     font-size: 1.2em;
     font-weight: 700;
     padding-bottom: 0.5em;
   }
+
   .description {
     font-size: 1.4em;
     font-weight: 400;
     text-transform: capitalize;
     padding-bottom: 0.5em;
+
     &:hover {
       cursor: pointer;
     }
   }
+
   .sku {
     padding-bottom: 0.5em;
     font-size: 1.2em;
   }
+
   .promotion {
     font-size: 1.2em;
     color: rgb(200, 0, 0);
+
     .original-price {
       text-decoration: line-through;
     }
+
     .discount {
       margin-left: 1em;
     }
   }
+
   .net-price {
     padding-bottom: 0.2em;
     font-size: 2em;
   }
+
   .free-shipping {
     font-size: 1.2em;
     font-style: italic;

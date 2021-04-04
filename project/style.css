@@ -182,8 +182,6 @@ header {
 }
 .sort-hide li {
   list-style: none;
-}
-.sort-hide li a {
   display: block;
   text-decoration: none;
   color: black;
@@ -192,8 +190,7 @@ header {
   font-size: 1.3em;
   border-bottom: 1px solid #424245;
 }
-.sort-hide li li:hover,
-.sort-hide li a:hover {
+.sort-hide li:hover {
   filter: brightness(200%);
   color: #0707b1;
   border-bottom: 1px solid #0707b1;
