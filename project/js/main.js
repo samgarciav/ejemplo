@@ -4,7 +4,7 @@ function toggleNav() {
   const hamburguer = document.getElementById("hamburger");
   const menuList = document.querySelector('.menu-list');
   hamburguer.addEventListener("click", () => {
-    hamburguer.classList.toggle("open");
+    hamburguer.classList.toggle("transformHamburger");
     menuList.classList.toggle("open");
     document.body.classList.toggle("overflow");
   });
@@ -38,10 +38,12 @@ const sort = document.querySelector(".sort");
 const sortHide = document.querySelector(".sort-hide");
 const backArrow = document.querySelector(".backArrow");
 sort.addEventListener("click", () => {
-  sortHide.classList.toggle("sort-show")
+  sortHide.classList.toggle("open")
   document.body.classList.toggle("overflow");
 });
 backArrow.addEventListener("click", () => {
-  sortHide.classList.toggle("sort-show")
+  sortHide.classList.toggle("open")
   document.body.classList.toggle("overflow");
 });
+
+

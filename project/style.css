@@ -19,6 +19,7 @@ body {
   color: transparent;
 }
 
+/* ------------------  Header  ------------------ */
 header {
   color: white;
   display: flex;
@@ -48,6 +49,7 @@ header {
   display: none;
 }
 
+/* ------------------  Hamburger Btn  ------------------ */
 .hamburgerBtn {
   display: flex;
   flex-direction: column;
@@ -69,27 +71,21 @@ header {
   z-index: 1;
 }
 
-.open div:nth-child(1) {
+.transformHamburger div:nth-child(1) {
   transform: translateX(2px) translateX(-2px) translateY(6px) rotate(45deg);
 }
-.open div:nth-child(2) {
+.transformHamburger div:nth-child(2) {
   transform: rotate(-45deg);
 }
-.open div:nth-child(3) {
+.transformHamburger div:nth-child(3) {
   transform: translateX(2px) translateX(-2px) translateY(-6px) rotate(-45deg);
 }
-.open h1 {
-  color: white;
-}
 
-h1 {
-  flex-grow: 1;
-}
-
+/* ------------------  Menu  ------------------ */
 .menu-list {
   padding: 2em;
   font-size: 1.2em;
-  background-color: rgba(255, 255, 255, 0.93);
+  background-color: rgba(255, 255, 255, 0.95);
   height: 0%;
   width: 100%;
   position: absolute;
@@ -100,8 +96,7 @@ h1 {
 .menu-list li {
   list-style: none;
 }
-
-a {
+.menu-list li a {
   display: block;
   text-decoration: none;
   color: black;
@@ -110,13 +105,12 @@ a {
   font-size: 1.3em;
   border-bottom: 1px solid #424245;
 }
-
-li:hover,
-a:hover {
+.menu-list li li:hover,
+.menu-list li a:hover {
   filter: brightness(200%);
-  color: #faf6f6;
+  color: #0707b1;
+  border-bottom: 1px solid #0707b1;
 }
-
 .menu-list.open {
   animation: pos 0.2s linear forwards;
 }
@@ -174,25 +168,51 @@ a:hover {
   background-color: #ddd;
 }
 
+/* ------------------------ Sort Showing Options ------------------------ */
 .sort-hide {
-  display: none;
+  display: block;
   position: absolute;
-  top: 9%;
+  top: -100%;
   width: 100%;
-  height: 100%;
-  font-size: 2em;
-  background-color: rgba(255, 255, 255, 0.9);
+  height: 0%;
   padding: 2em;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.95);
+  animation: pos1 0.1s linear forwards;
 }
-.sort-hide .sortOptions {
-  padding: 1em;
+.sort-hide li {
+  list-style: none;
 }
-.sort-hide .sortOptions div {
-  padding: 1em 0 1em 1em;
+.sort-hide li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  font-size: 1.3em;
+  border-bottom: 1px solid #424245;
+}
+.sort-hide li li:hover,
+.sort-hide li a:hover {
+  filter: brightness(200%);
+  color: #0707b1;
+  border-bottom: 1px solid #0707b1;
+}
+.sort-hide.open {
+  animation: pos 0.2s linear forwards;
 }
 
-.sort-show {
-  display: block;
+.backArrow {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+}
+.backArrow img {
+  margin-right: 0.8em;
+}
+
+.sortOptions {
+  padding: 2em 0 0 4em;
 }
 
 /* ------------------------ Products Area ------------------------ */
@@ -272,33 +292,5 @@ a:hover {
   font-size: 1.2em;
   font-style: italic;
 }
-
-/* 
-.add-btn {
-  margin-bottom: 0.7em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  button {
-    width: 100%;
-    padding: 0.2em;
-  }
-}
-
-.add-btn button {
-  display: inline-block;
-  padding: 0.3em 1.2em;
-  border-radius: 0.3em;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: #ffffff;
-  background-color: #4eb5f1;
-  text-align: center;
-  transition: all 0.2s;
-}
-.add-btn button:hover {
-  background-color: #4095c6;
-}
- */
 
 /*# sourceMappingURL=style.css.map */
