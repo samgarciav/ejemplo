@@ -20,7 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #b77821;
+  background-color: #d8973e;
   padding: 1em;
   transition: all 0.01s 0.2s ease;
 }
@@ -170,7 +170,6 @@ a:hover {
   display: flex;
   padding: 1em;
   background-color: #f3f1f8;
-  transition: all 2s linear;
 }
 .productsGrid img {
   display: block;
