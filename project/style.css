@@ -82,6 +82,10 @@ header {
 }
 
 /* ------------------  Menu  ------------------ */
+main {
+  position: relative;
+}
+
 .menu-list {
   padding: 2em;
   font-size: 1.2em;
@@ -117,20 +121,20 @@ header {
 
 @keyframes pos {
   0% {
-    top: 9%;
+    top: 0%;
   }
   100% {
-    top: 9%;
+    top: 0%;
     height: 100%;
   }
 }
 @keyframes pos1 {
   0% {
-    top: 9%;
+    top: 0%;
     height: 100%;
   }
   100% {
-    top: 9%;
+    top: 0%;
     visibility: collapse;
   }
 }
@@ -245,7 +249,7 @@ header {
   margin-bottom: 1em;
 }
 
-.productImg {
+.productImg img {
   cursor: pointer;
 }
 
@@ -265,6 +269,7 @@ header {
 }
 .productInfo .description:hover {
   cursor: pointer;
+  color: #0707b1;
 }
 .productInfo .sku {
   padding-bottom: 0.5em;

@@ -1,59 +1,21 @@
-import Comment from './comments.js';
-
-const hikeList = [
-  {
-    name: "Bechler Falls",
-    imgSrc: "falls.jpg",
-    imgAlt: "Image of Bechler Falls",
-    distance: "3 miles",
-    difficulty: "Easy",
-    description:
-      "Beautiful short hike along the Bechler river to Bechler Falls",
-    directions:
-      "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road.Drive to the end of the Cave Falls road. There is a parking area at the trailhead.",
-  },
-  {
-    name: "Teton Canyon",
-    imgSrc: "falls.jpg",
-    imgAlt: "Image of Bechler Falls",
-    distance: "3 miles",
-    difficulty: "Easy",
-    description: "Beautiful short (or long) hike through Teton Canyon.",
-    directions:
-      "Take Highway 33 East to Driggs. Turn left onto Teton Canyon Road. Follow that road for a few miles then turn right onto Staline Raod for a short distance, then left onto Alta Road. Veer right after Alta back onto Teton Canyon Road. There is a parking area at the trailhead.",
-  },
-  {
-    name: "Denanda Falls",
-    imgSrc: "falls.jpg",
-    imgAlt: "Image of Bechler Falls",
-    distance: "7 miles",
-    difficulty: "Moderate",
-    description:
-      "Beautiful hike through Bechler meadows river to Denanda Falls",
-    directions:
-      "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road. Drive to until you see the sign for Bechler Meadows on the left. Turn there. There is a parking area at the trailhead.",
-  },
-];
-
-const imgBasePath = "//byui-cit.github.io/cit261/examples/";
-
-export default class Hikes {
-  constructor(elementId) {
-    this.parentElement = document.getElementById(elementId);
-    // we need a back button to return back to the list. This will build it and hide it. When we need it we just need to remove the 'hidden' class
+export default class Products {
+  constructor(prodcutsCol1) {
+    this.parentElement = document.getElementById(prodcutsCol1);
+    // what if I would to load a new page? In class we did overwrite the content of the page to show details...
     this.backButton = this.buildBackButton();
-    this.comments = new Comment();
   }
-  // why is this function necessary?  hikeList is not exported, and so it cannot be seen outside of this module. I added this in case I ever need the list of hikes outside of the module. This also sets me up nicely if my data were to move. I can just change this method to the new source and everything will still work if I only access the data through this getter.
-  getAllHikes() {
-    return hikeList;
+
+  // Get the data from the JSON file
+  getAllProducts() {
+    const response = await fetch('data.json');
+    const data = await response.json();
   }
 
   //show a list of hikes in the parentElement
   showHikeList() {
     this.parentElement.innerHTML = "";
     // notice that we use our getter above to grab the list instead of getting it directly...this makes it easier on us if our data source changes...
-    renderHikeList(this.parentElement, this.getAllHikes());
+    renderHikeList(this.parentElement, this.getAllProducts());
     this.addHikeListener();
     // make sure the back button is hidden
     this.backButton.classList.add("hidden");

@@ -46,4 +46,19 @@ backArrow.addEventListener("click", () => {
   document.body.classList.toggle("overflow");
 });
 
+/* -------------------------  Testing  ------------------------- */
+const getProducts = async () => {
+  const response = await fetch('data.json');
+  const data = await response.json();
+  console.log(data);
+}
+getProducts();
 
+/* or */
+
+async function getAllProducts() {
+  const response = await fetch('data.json');
+  const data = await response.json();
+  console.log(data);
+}
+getAllProducts();
