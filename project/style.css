@@ -217,7 +217,9 @@ main {
 
 /* ------------------------ Products Area ------------------------ */
 .productsGrid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
   padding: 1em;
   background-color: #f3f1f8;
 }
@@ -229,16 +231,10 @@ main {
 .block {
   display: block;
 }
-.block .prodcutsCol1 {
-  padding-right: 0;
-}
 .block .singleProduct {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-}
-
-.prodcutsCol1 {
-  padding-right: 1em;
 }
 
 .singleProduct {
@@ -262,7 +258,7 @@ main {
   padding-bottom: 0.5em;
 }
 .productInfo .description {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 400;
   text-transform: capitalize;
   padding-bottom: 0.5em;
@@ -273,10 +269,10 @@ main {
 }
 .productInfo .sku {
   padding-bottom: 0.5em;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .productInfo .promotion {
-  font-size: 1.2em;
+  font-size: 1em;
   color: #c80000;
 }
 .productInfo .promotion .original-price {

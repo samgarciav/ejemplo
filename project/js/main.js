@@ -1,3 +1,9 @@
+/* -------------------------  Initiate the Products  ------------------------- */
+import ProductsController from './productsController.js';
+
+const myProducts = new ProductsController('.productsGrid');
+myProducts.init();
+
 /* -------------------------  Hamburger Button  ------------------------- */
 window.onload = toggleNav;
 function toggleNav() {
@@ -15,9 +21,7 @@ const thisfunction = function () {
   console.log("hello");
 }
 const singleproduct = document.querySelectorAll(".singleProduct");
-console.log(singleproduct);
 singleproduct.forEach(product => { product.addEventListener("click", thisfunction) })
-
 
 /* -------------------------  Toogle Views  ------------------------- */
 const changeView = document.querySelector(".changeView");
@@ -47,18 +51,16 @@ backArrow.addEventListener("click", () => {
 });
 
 /* -------------------------  Testing  ------------------------- */
-const getProducts = async () => {
-  const response = await fetch('data.json');
-  const data = await response.json();
-  console.log(data);
-}
-getProducts();
-
-/* or */
-
-async function getAllProducts() {
-  const response = await fetch('data.json');
-  const data = await response.json();
-  console.log(data);
-}
-getAllProducts();
+// const getProducts = async () => {
+//   const response = await fetch('data.json');
+//   const data = await response.json();
+//   console.log(data);
+// }
+// getProducts();
+/********** Or **********/
+// async function getAllProducts() {
+//   const response = await fetch('data.json');
+//   const test = [... await response.json()];
+//   console.log(test);
+// }
+// getAllProducts();

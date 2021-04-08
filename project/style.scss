@@ -243,7 +243,9 @@ main {
 
 /* ------------------------ Products Area ------------------------ */
 .productsGrid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
   padding: 1em;
   background-color: #f3f1f8;
 
@@ -256,19 +258,14 @@ main {
 .block {
   display: block;
 
-  .prodcutsCol1 {
-    padding-right: 0;
-  }
-
-  .singleProduct {
-    display: flex;
+   .singleProduct {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 }
 
-.prodcutsCol1 {
-  padding-right: 1em;
-}
+
 
 .singleProduct {
   box-shadow: 0 10px 16px 0 rgb(0 0 0 / 10%);
@@ -292,7 +289,7 @@ main {
   }
 
   .description {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 400;
     text-transform: capitalize;
     padding-bottom: 0.5em;
@@ -305,11 +302,11 @@ main {
 
   .sku {
     padding-bottom: 0.5em;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .promotion {
-    font-size: 1.2em;
+    font-size: 1em;
     color: rgb(200, 0, 0);
 
     .original-price {

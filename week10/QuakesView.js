@@ -38,7 +38,6 @@ export default class QuakesView {
     btn.addEventListener('click', e => {
       const radius = document.getElementById('radius').value;
       new QuakesController('#quakeList', '', radius).init();
-
     });
     element.appendChild(btn);
   }

@@ -1,29 +1,31 @@
 export default class Products {
-  constructor(prodcutsCol1) {
-    this.parentElement = document.getElementById(prodcutsCol1);
+  constructor(prodcutsGrid) {
+    this.parentElement = document.querySelector(prodcutsGrid);
     // what if I would to load a new page? In class we did overwrite the content of the page to show details...
-    this.backButton = this.buildBackButton();
+    // this.backButton = this.buildBackButton();
   }
 
   // Get the data from the JSON file
-  getAllProducts() {
+  async getAllProducts() {
     const response = await fetch('data.json');
     const data = await response.json();
+    return data;
   }
 
-  //show a list of hikes in the parentElement
-  showHikeList() {
+  //show the products in the respective parentElement (prodcutscol1 or productscol2)
+  async showProducts() {
     this.parentElement.innerHTML = "";
     // notice that we use our getter above to grab the list instead of getting it directly...this makes it easier on us if our data source changes...
-    renderHikeList(this.parentElement, this.getAllProducts());
-    this.addHikeListener();
+    const data = await this.getAllProducts();
+    renderProducts(this.parentElement, data);
+    /* this.addHikeListener();
     // make sure the back button is hidden
     this.backButton.classList.add("hidden");
-    this.comments.showComments();
+    this.comments.showComments(); */
   }
 
   // show one hike with full details in the parentElement
-  showOneHike(hikeName) {
+  /* showOneHike(hikeName) {
     const hike = this.getHikeByName(hikeName);
     this.parentElement.innerHTML = "";
     this.parentElement.appendChild(renderOneHikeFull(hike));
@@ -58,58 +60,15 @@ export default class Products {
     backButton.classList.add("hidden");
     this.parentElement.before(backButton);
     return backButton;
-  }
+  }*/
 }
-// End of Hikes class
+// End of Products class
 
 // methods responsible for building HTML.  Why aren't these in the class?  They don't really need to be, and by moving them outside of the exported class, they cannot be called outside the module...they become private.
-function renderHikeList(parent, hikes) {
-  hikes.forEach((hike) => {
-    parent.appendChild(renderOneHikeLight(hike));
+function renderProducts(parent, products) {
+  console.log(products);
+  products.forEach((product) => {
+    parent.appendChild(renderProductOnGrid(product));
   });
 }
 
-function renderOneHikeLight(hike) {
-  const item = document.createElement("li");
-  item.classList.add("light");
-  // setting this to make getting the details for a specific hike easier later.
-  item.setAttribute("data-name", hike.name);
-  item.innerHTML = ` <h2>${hike.name}</h2>
-  <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
-  <div>
-        <div>
-            <h3>Distance</h3>
-            <p>${hike.distance}</p>
-        </div>
-        <div>
-            <h3>Difficulty</h3>
-            <p>${hike.difficulty}</p>
-        </div>
-  </div>`;
-  return item;
-}
-
-function renderOneHikeFull(hike) {
-  const item = document.createElement("li");
-  item.innerHTML = `     
-        <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
-        <h2>${hike.name}</h2>
-        <div>
-            <h3>Distance</h3>
-            <p>${hike.distance}</p>
-        </div>
-        <div>
-            <h3>Difficulty</h3>
-            <p>${hike.difficulty}</p>
-        </div>
-        <div>
-            <h3>Description</h3>
-            <p>${hike.description}</p>
-        </div>
-        <div>
-            <h3>How to get there</h3>
-            <p>${hike.directions}</p>
-        </div>
-    `;
-  return item;
-}

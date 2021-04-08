@@ -2,6 +2,7 @@
 const baseURL = 'http://127.0.0.1:3000/';
 // helper function to make an http request with fetch.
 // returns a json object
+
 export async function makeRequest(url, method = 'GET', body = null, token = null) {
   // we will need to set some custom options for our fetch call
     let options = {
@@ -30,7 +31,6 @@ export async function makeRequest(url, method = 'GET', body = null, token = null
     console.log(response);
     throw new Error(`${data.status}: ${data.message}`);
   } else return data;
-
   // not catching the error here...so we will need to catch it later on and handle it.
 }
 
