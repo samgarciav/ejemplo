@@ -33,7 +33,7 @@ export default class ProductsView {
                 <figure>
                   <picture>
                     <source media="(max-width:650px)" srcset="images/optimized250.jpg">
-                    <img width="1000px" height="1000px" src="images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
+                    <img width="1000" height="1000" src="images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
                       alt="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp"
                       title="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp">
                   </picture>
@@ -56,7 +56,7 @@ export default class ProductsView {
                 <figure>
                   <picture>
                     <source media="(max-width:650px)" srcset="images/optimized250.jpg">
-                    <img width="1000px" height="1000px" src="images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
+                    <img width="1000" height="1000" src="images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
                       alt="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp"
                       title="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp">
                   </picture>
