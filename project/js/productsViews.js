@@ -29,12 +29,11 @@ export default class ProductsView {
     // conditionally create and display the promotion div based on the json 
     if (parseFloat(product.Discount) > 0) {
       div.innerHTML = `
-      <div class="singleProduct>
       <div class="productImg">
                 <figure>
                   <picture>
-                    <source media="(max-width:650px)" srcset="../images/optimized250.jpg">
-                    <img src="../images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
+                    <source media="(max-width:650px)" srcset="images/optimized250.jpg">
+                    <img src="images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
                       alt="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp"
                       title="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp">
                   </picture>
@@ -50,15 +49,14 @@ export default class ProductsView {
                 <div class="net-price">${NetPrice}</div>
                 <div class="free-shipping">Free shipping</div>
               </div>
-            </div>`}
+        `}
     else {
       div.innerHTML = `
-      <div class="singleProduct>
       <div class="productImg">
                 <figure>
                   <picture>
-                    <source media="(max-width:650px)" srcset="../images/optimized250.jpg">
-                    <img src="../images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
+                    <source media="(max-width:650px)" srcset="images/optimized250.jpg">
+                    <img src="images/Cadena_de_Oro_10k_Italiana_Guchi_diamantada.webp"
                       alt="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp"
                       title="Cadena_de_Oro_10k_Italiana_Guchi diamantada.webp">
                   </picture>
@@ -73,7 +71,7 @@ export default class ProductsView {
                 <div class="net-price">${NetPrice}</div>
                 <div class="free-shipping">Free shipping</div>
               </div>
-              </div>`
+              `
     }
     return div;
   }
