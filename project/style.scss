@@ -252,6 +252,7 @@ main {
   img {
     display: block;
     max-width: 100%;
+    height: auto;
   }
 }
 
@@ -264,8 +265,6 @@ main {
     align-items: center;
   }
 }
-
-
 
 .singleProduct {
   box-shadow: 0 10px 16px 0 rgb(0 0 0 / 10%);
