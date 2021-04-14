@@ -1,0 +1,38 @@
+.line {
+  border: 1px solid;
+}
+
+.poly {
+  border: 1px solid blue;
+}
+
+.sort {
+  border: 1px solid;
+  height: 1em;
+  stroke: blue;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
+
+.cart {
+  height: 1em;
+  border: 1px solid;
+  stroke: blue;
+  stroke-width: 2px;
+}
+
+.symbol {
+  display: none;
+}
+
+.filter {
+  border: 1px solid;
+  stroke: blue;
+  stroke-width: 2px;
+}
+
+.backArrow{
+  border: 1px solid;
+  stroke: blue;
+  stroke-width: 2px;
+}

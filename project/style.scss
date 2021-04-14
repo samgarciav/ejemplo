@@ -33,22 +33,20 @@ header {
   background-color: $caro-color;
   padding: 1em;
   transition: all 0.01s 0.2s ease;
-}
 
-.logo {
-  display: block;
-  height: 3em;
+  .logo {
+    display: block;
+    height: 3em;
 
-  img {
-    max-height: 100%;
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
-}
-
-.cartimage {
-  height: 2.4em;
-
-  img {
-    max-height: 100%;
+  svg {
+    height: 2.4em;
+    width: 2.4em;
+    stroke: white;
   }
 }
 
@@ -187,6 +185,14 @@ main {
     height: 1em;
     margin-right: 0.5em;
   }
+
+  svg {
+    height: 1em;
+    width: 1em;
+    margin-right: 0.5em;
+    stroke: $icon-color;
+    stroke-width: 1.5px;
+  }
 }
 
 .separators {
@@ -232,8 +238,13 @@ main {
   align-items: center;
   font-size: 2em;
 
-  img {
+  svg {
+    width: 1em;
+    height: 1em;
+    stroke: $icon-color;
+    stroke-width: 1.5px;
     margin-right: 0.8em;
+    cursor: pointer;
   }
 }
 
@@ -259,7 +270,7 @@ main {
 .block {
   display: block;
 
-   .singleProduct {
+  .singleProduct {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -326,4 +337,8 @@ main {
     font-size: 1.2em;
     font-style: italic;
   }
+}
+/* ------------------------ Symbols ------------------------ */
+.symbol{
+  display: none;
 }

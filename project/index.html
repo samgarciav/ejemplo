@@ -20,16 +20,12 @@
       <div></div>
     </div>
     <div class="logo">
-      <h1 class="sr-only">Joyerías Carolina</h1><img src="images/logobrand.png" alt="Logo Joyerias Carolina">
+      <h1 class="sr-only">Joyerías Carolina</h1><img width="200" height="61.6" src="images/logobrand.png" alt="Logo Joyerias Carolina">
     </div>
     <div class="cartimage">
-      <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="8" cy="21" fill="none" r="2" stroke="white" stroke-linecap="round" stroke-linejoin="round"
-          stroke-width="1" />
-        <circle cx="20" cy="21" fill="none" r="2" stroke="white" stroke-linecap="round" stroke-linejoin="round"
-          stroke-width="1" />
-        <path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none"
-          stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" /></svg></div>
+      <svg>
+        <use href="#cart" /></svg>
+    </div>
     <div class="searchbar"><label><span class="sr-only">Search bar</span><input type="text" name="search"
           id="searchBar"></label></div>
   </header>
@@ -43,16 +39,24 @@
       </ul>
     </div>
 
+    <!--  ------------------------ Sort and Filter Area ------------------------  -->
     <div class="sortFilterWrapper">
-      <div class="sortFilter sort"> <img src="images/sort.svg" alt="Sort Icon">Sort</div>
+      <div class="sortFilter sort"> <svg>
+          <use href="#sort" /></svg> Sort
+      </div>
       <div class="separators"></div>
-      <div class="sortFilter changeView"><img src="images/list.svg" alt="View Icon">List</div>
+      <div class="sortFilter changeView"><img width="24" height="24" src="images/list.svg" alt="View Icon">List</div>
       <div class="separators"></div>
-      <div class="sortFilter"> <img src="images/filter.svg" alt="Filter Icon">Filter</div>
+      <div class="sortFilter"> <svg>
+          <use href="#filter" /></svg>Filter
+      </div>
     </div>
 
     <div class="sort-hide">
-      <div class="backArrow"><img src="images/backArrow.svg" alt="">Sort</div>
+      <div class="backArrow">
+        <svg>
+          <use href="#backArrow" /></svg>Sort
+      </div>
       <ul class="sortOptions">
         <li>Lowest price</li>
         <li>Heighest pria</li>
@@ -60,7 +64,7 @@
         <li>Oldest price</li>
       </ul>
     </div>
-
+    <!-- ------------------------ Products Area ------------------------ -->
     <div class="productsGrid">
       <div class="productsCol1">
 
@@ -201,6 +205,38 @@
     </div>
   </main>
   <footer></footer>
+
+  <!-- SGVS -->
+  <svg class="symbol">
+    <symbol id="cart" viewBox="0 0 24 24">
+      <circle cx="8" cy="21" fill="none" r="2" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="20" cy="21" fill="none" r="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol id="sort" viewBox="0 0 24 24">
+      <title>Sort Icon</title>
+      <desc>Sorting ascending and desending arrows</desc>>
+      <path d="M6,10 L6,1 L6,23 L2,18 L6,23 L10,18 L6,23" stroke-linejoin="round"></path>
+      <path d="M18,20 L18,23 L18,1 L14,6 L18,1 L22,6 L18,1" stroke-linejoin="round"></path>
+    </symbol>
+
+    <symbol id="filter" viewBox="0 0 24 24">
+      <title>Filter Icon</title>
+      <path d="M1,4 L1,4 L23,4" stroke-linecap="round" />
+      <circle cx="6" cy="4" fill="white" r="2" />
+      <path d="M1,12 L1,12 L23,12" stroke-linecap="round" />
+      <circle cx="18" cy="12" fill="white" r="2" />
+      <path d="M1,20 L1,20 L23,20" stroke-linecap="round" />
+      <circle cx="9" cy="20" fill="white" r="2" />
+    </symbol>
+
+    <symbol id="backArrow" viewBox="0 0 24 24">
+      <title>Back Arrow Icon</title>
+      <path d="M23,12 L1,12 L5,8 L1,12 L5,16" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+    </symbol>
+  </svg>
 
 
   <script src="js/main.js" type="module"></script>

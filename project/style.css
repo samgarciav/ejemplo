@@ -29,20 +29,18 @@ header {
   padding: 1em;
   transition: all 0.01s 0.2s ease;
 }
-
-.logo {
+header .logo {
   display: block;
   height: 3em;
 }
-.logo img {
-  max-height: 100%;
+header .logo img {
+  height: 100%;
+  width: auto;
 }
-
-.cartimage {
+header svg {
   height: 2.4em;
-}
-.cartimage img {
-  max-height: 100%;
+  width: 2.4em;
+  stroke: white;
 }
 
 .searchbar {
@@ -165,6 +163,13 @@ main {
   height: 1em;
   margin-right: 0.5em;
 }
+.sortFilter svg {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5em;
+  stroke: #0707b1;
+  stroke-width: 1.5px;
+}
 
 .separators {
   width: 1px;
@@ -207,8 +212,13 @@ main {
   align-items: center;
   font-size: 2em;
 }
-.backArrow img {
+.backArrow svg {
+  width: 1em;
+  height: 1em;
+  stroke: #0707b1;
+  stroke-width: 1.5px;
   margin-right: 0.8em;
+  cursor: pointer;
 }
 
 .sortOptions {
@@ -289,6 +299,11 @@ main {
 .productInfo .free-shipping {
   font-size: 1.2em;
   font-style: italic;
+}
+
+/* ------------------------ Symbols ------------------------ */
+.symbol {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

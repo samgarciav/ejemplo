@@ -29,10 +29,10 @@ const productsGrid = document.querySelector(".productsGrid");
 changeView.addEventListener("click", () => {
   console.log(changeView.innerHTML);
   if (changeView.innerText == "List") {
-    changeView.innerHTML = `<img src="images/mosaic.svg" alt="View Icon">Mosaic`;
+    changeView.innerHTML = `<img height="24" width="24" src="images/mosaic.svg" alt="View Icon">Mosaic`;
   }
   else if ((changeView.innerText == "Mosaic")) {
-    changeView.innerHTML = `<img src="images/list.svg" alt="View Icon">List`;
+    changeView.innerHTML = `<img height="24" width="24" src="images/list.svg" alt="View Icon">List`;
   }
   productsGrid.classList.toggle('block')
 });
